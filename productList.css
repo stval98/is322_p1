@@ -1,0 +1,73 @@
+html, body {
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #ffdb58;
+	font-family: 'Segoe UI';
+}
+
+.app-container {
+	width: 1024px;
+	margin: auto;
+	display: flex;
+	min-height: 80%;
+	background-color: #ffdb58;
+}
+
+.content-container {
+	flex: 1 1 auto;
+	width: 100%;
+	margin: 10px;
+	padding: 5px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.card-body{
+	font-family: Segoe UI;
+}
+
+@media only screen and (max-width: 1199px) {
+	.app-container {
+		flex-direction: column;
+		width: 900px;
+	}
+/*
+	.navigation {
+		min-height: auto;
+		flex: 0 0 35px;
+	}
+
+	.navigation a {
+		display: inline-block;
+	} */
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1000px) {
+	.app-container {
+		margin: auto; 
+		width: 720px;
+		padding: 10px;
+	}
+
+	.content-container .card {
+		flex-basis: 330px;
+		height: 330px;
+	}
+}
+
+@media only screen and (max-width: 749px) {
+	.app-container {
+		margin: 0 15px;
+		width: calc(100% - 30px);
+	}
+
+	.content-container {
+		width: calc(100% - 50px);
+	}
+
+	.content-container .card {
+		height: 50px;
+		flex-basis: 100%;
+	}
+}
