@@ -2,7 +2,7 @@ html, body {
 	min-height: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: #ffdb58;
+	background-color: white;
 	font-family: 'Segoe UI';
 }
 
@@ -11,7 +11,7 @@ html, body {
 	margin: auto;
 	display: flex;
 	min-height: 80%;
-	background-color: #ffdb58;
+	background-color: white;
 }
 
 .content-container {
@@ -27,21 +27,31 @@ html, body {
 	font-family: Segoe UI;
 }
 
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
 @media only screen and (max-width: 1199px) {
 	.app-container {
 		flex-direction: column;
 		width: 900px;
 	}
-/*
-	.navigation {
-		min-height: auto;
-		flex: 0 0 35px;
-	}
-
-	.navigation a {
-		display: inline-block;
-	} */
-}
 
 @media only screen and (min-width: 750px) and (max-width: 1000px) {
 	.app-container {
