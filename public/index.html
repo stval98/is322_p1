@@ -1,133 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--Made using Bootsrap 4-->
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="theme-color" content="#000000" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#ffffff">
+  
+
+  <!--STYLESHEETS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="landing.css" />
+
+    <title>Home</title>
   </head>
-<style>
-* {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
+  <div id="root"></div>
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 700px;
-  position: relative;
-  margin: auto;
-}
+  <!--NAVIGATION BAR-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: black;">
+    <a class="navbar-brand" href="index.html" style="color:white;">Recipes 'R' Us</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+  <!--Navbar content -->
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+      <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="productList.html">Recipes </a>
+      </li>
+    </ul>
+   
+    </div>
+  </nav>
+  <!--FILTER BAR-->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+  <!--Navbar content -->
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+      </li>
+    </ul>
+    </div>
+  </nav>
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-</style>
-</head>
 <body>
-
-
-
 <div class="slideshow-container">
-
-<div class="mySlides fade">
+<div class="mySlides">
   <div class="numbertext">1 / 3</div>
-  <img src="astha.jpg" class="center" style="width:50%">
-  <div class="text">Caption Text</div>
+  <img src="landingpics/potato.jpg" class="center" style="width: 100%">
 </div>
 
-<div class="mySlides fade">
+<div class="mySlides">
   <div class="numbertext">2 / 3</div>
-  <img src="img_snow_wide.jpg" style="width:25%">
-  <div class="text">Caption Two</div>
+  <img src="landingpics/rice.jpg" style="width:100%">
 </div>
 
-<div class="mySlides fade">
+<div class="mySlides">
   <div class="numbertext">3 / 3</div>
-  <img src="img_mountains_wide.jpg" style="width:25%">
-  <div class="text">Caption Three</div>
-</div>
-
-</div>
-<br>
+  <img src="landingpics/pasta.jpg" style="width:100%">
+ </div>
 
 <div style="text-align:center">
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
 </div>
+</div>
 
+</body>
 <script>
 var slideIndex = 0;
 showSlides();
@@ -146,14 +99,33 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 4000); // Change image every 4 seconds
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 </script>
-<p> <c> BLURB ABOUT IT </c> </p>
 
-<footer>
-  <p>Company Name, Phone, Adress</p>
-  <p> Links to social media <a href="mailto:someone@example.com">someone@example.com</a>.</p>
-</footer> 
+
+<body> 
+<p align="center"> <font size="5"> Weclome to Recipes 'R' Us! We are a local company based in Newark, New Jersey but we produce recipes worldwide! Our team of diverse individuals consist of chefs with experience in fast-food to five star resturants. We have composed of a list of recipes that are rice in flavor, healthy, budget-friendly, and easy to make. We hope you find your next go-to meal or use these recipes to impress someone! No matter what there is something here for everyone. Happy eating! 
+</font> </p>
 </body>
+<div class="footer">
+  <p> Recipes 'R' Us &trade; / 123-456-7890 
+  <p> 123 Main Street, Newark NJ </p>
+  <a href="https://www.instagram.com">
+  <img src="footerpics/insta.png" alt="Instagram" style="width:50px;height:50px;border:0;"> </a> 
+ <a href="https://github.com/stval98/is322_p1"> 
+ <img src="footerpics/git.png" alt="GitHub" style="width:50px;height:50px;border:0;"> </a> 
+ <a href="mailto:as2865@njit.edu?" >
+ <img src="footerpics/email.png" atl="Email" style="width:70px;height:50px;border:0;">  </a> 
+ <a href="https://www.facebook.com"> 
+ <img src="footerpics/fb.png" alt="Linkedin" style="width:50px;height:50px;border:0;"> </a> 
+
+</div> 
+<!--SCRIPTS-->
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
 </html> 
