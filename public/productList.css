@@ -26,25 +26,9 @@ html, body {
 .card-body{
 	font-family: Segoe UI;
 }
-
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: relative;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.sidenav a {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
+#sidebar {
+	position: fixed;
+	padding-left: 15px;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -52,7 +36,7 @@ html, body {
 		flex-direction: column;
 		width: 900px;
 	}
-
+}
 @media only screen and (min-width: 750px) and (max-width: 1000px) {
 	.app-container {
 		margin: auto; 
@@ -68,7 +52,7 @@ html, body {
 
 @media only screen and (max-width: 749px) {
 	.app-container {
-		margin: 0 15px;
+		margin: 0 100px;
 		width: calc(100% - 30px);
 	}
 

@@ -7,7 +7,7 @@
 	<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1"
     />
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -17,6 +17,7 @@
 	<meta name="msapplication-TileColor" content="#ffc40d">
 	<meta name="theme-color" content="#ffffff">
 	<!--STYLESHEETS-->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="productList.css" />
     <title>Product List</title>
@@ -25,7 +26,11 @@
     <div id="root"></div>
 	<!--NAVIGATION BAR-->
 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: black;">
+<<<<<<< HEAD
 		<a class="navbar-brand" href="index.html" style="color:white;">Food!</a>
+=======
+		<a class="navbar-brand" href="landing.html" style="color:white;">Recipes 'R' Us</a>
+>>>>>>> Update layout on productList.html. Add filtering functions to productList.js.
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	  </button>
@@ -44,134 +49,134 @@
 		  <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" style="border-color: #ffdb58; background-color: #ffdb58;">Search</button>
 		</form>
 	  </div>
-	</nav>
-	<!--FILTER BAR-->
-	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
-	<!--Navbar content -->
-	  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-		  <li class="nav-item">
-			<div class="dropdown">
-				<button class="btn-dark btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-color: #ffdb58; background-color: #ffdb58; color: black;">
-					Sort recipes
-				</button>
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href="#">By name: A-Z</a>
-				<a class="dropdown-item" href="#">By name: Z-A</a>
-				<a class="dropdown-item" href="#">By price: low to high</a>
-				<a class="dropdown-item" href="#">By price: high to low</a>
-			</div>
+	 </nav>
+	 
+<!--SIDEBAR -->
+<div class="w3-sidebar w3-white w3-bar-block" style="width:10%"; id="sidebar">
+  <h3 class="w3-bar-item" style="padding-left: 25px;">Filter Recipes</h3>
+<!--FILTERS-->
+	  <div class="filter-wrapper" style="padding-left: 25px;">
+				<div class="form-group">
+					<label for="sortMenu">Sort By</label>
+					<select id="sortMenu" name="sortMenu">
+						<option value="name">Name</option>
+						<option value="price">Price</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="vegan">Show Non-Vegan Meals?</label>	
+					<select id="vegan" name="vegan">
+						<option value="true">Yes</option>
+						<option value="false">No</option>
+					</select>
+				</div>
 </div>
-		  </li>
-		</ul>
-	  </div>
-	</nav>
+</div>
 	<!--PRODUCTS-->
-	<div class="app-container">
+	<div class="app-container" style="margin-left:15%">
 		<div class="content-container">
-			<aside></aside>
-			<div class="card-columns">
-				<div class="card" style="width: 18rem; padding-bottom: 15px;">
+			<div id="recipes" class="card-columns">
+				<div id="recipe" class="card" style="width: 18rem; padding-bottom: 15px;">
 					<div class="card-header" style="background-color: black; font-weight: bold; color: white;">Chef's Favorite</div>
-				  <img class="card-img-top" src="recipe_imgs/Golden-Coconut-and-Lentil-Soup-V.jpg" alt="Card image cap">
+				  <img class="card-img-top" src="recipe_imgs/Golden-Coconut-and-Lentil-Soup-V.jpg" alt="Golden Coconut Lentil Soup">
 				  <div class="card-body">
-					<p class="card-text" style="font-weight: bold;">Golden Coconut Lentil Soup</p>
-					<p class="card-text">$4.27</p>
+					<p id="name" value="golden coconut lentil soup" class="card-text" style="font-weight: bold;">Golden Coconut Lentil Soup</p>
+					<p id="price" value="4.27" class="card-text">$4.27</p>
 					<a href="productPage.html" class="card-link" style="font-weight: bold; color: #ffdb58;">Read more</a>
 				  </div>
 				</div>
-				<div class="card" style="width: 18rem;">
-				  <img class="card-img-top" src="recipe_imgs/Roasted-Cauliflower-Salad-V2.jpg" alt="Card image cap">
+				<div id="recipe" class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="recipe_imgs/Roasted-Cauliflower-Salad-V2.jpg" alt="Roasted Cauliflower Salad with Lemon Tahini Dressing">
 				  <div class="card-body">
-					<p class="card-text" style="font-weight: bold;">Roasted Cauliflower Salad with Lemon Tahini Dressing</p>
-					<p class="card-text">$6.99</p>
+					<p id="name" value="roasted cauliflower salad" class="card-text" style="font-weight: bold;">Roasted Cauliflower Salad with Lemon Tahini Dressing</p>
+					<p id="price" value="6.99" class="card-text">$6.99</p>
 					<a href="https://www.budgetbytes.com/roasted-cauliflower-salad-lemon-tahini-dressing/" class="card-link" style="font-weight: bold; color: #ffdb58;">Read more</a>
 				  </div>
 				</div>
-				<div class="card" style="width: 18rem;">
-				  <img class="card-img-top" src="recipe_imgs/Tomato-Herb-Rice-with-White-Beans-and-Spinach-V-768x1024.jpg" alt="Card image cap">
+				<div id="recipe" class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="recipe_imgs/Tomato-Herb-Rice-with-White-Beans-and-Spinach-V-768x1024.jpg" alt="Tomato Herb Rice with White Beans and Spinach">
 				  <div class="card-body">
-					<p class="card-text" style="font-weight: bold;">Tomato Herb Rice with White Beans and Spinach</p>
-					<p class="card-text">$5.14</p>
+					<p id="name" value="tomato herb rice" class="card-text" style="font-weight: bold;">Tomato Herb Rice with White Beans and Spinach</p>
+					<p id="price" value="5.14" class="card-text">$5.14</p>
 					<a href="https://www.budgetbytes.com/tomato-herb-rice-with-white-beans-and-spinach/" class="card-link" style="font-weight: bold; color: #ffdb58;">Read more</a>
 				  </div>
 				</div>
-				<div class="card" style="width: 18rem;">
-				  <img class="card-img-top" src="recipe_imgs/Creamy-White-Bean-and-Spinach-Quesadillas-V-768x1024.jpg" alt="Card image cap">
+				<div id="recipe" class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="recipe_imgs/Creamy-White-Bean-and-Spinach-Quesadillas-V-768x1024.jpg" alt="Creamy White Bean and Spinach Quesadillas">
 				  <div class="card-body">
-					<p class="card-text" style="font-weight: bold;">Creamy White Bean and Spinach Quesadillas</p>
-					<p class="card-text">$3.99</p>
+					<p id="name" value="creamy white bean quesadillas" class="card-text" style="font-weight: bold;">Creamy White Bean and Spinach Quesadillas</p>
+					<p id="price" value="3.99" class="card-text">$3.99</p>
 					<a href="https://www.budgetbytes.com/creamy-white-bean-and-spinach-quesadillas/" class="card-link" style="font-weight: bold; color: #ffdb58;">Read more</a>
 				  </div>
 				</div>
-				<div class="card" style="width: 18rem;">
-				  <img class="card-img-top" src="recipe_imgs/Sheet-Pan-Pesto-Chicken-Dinner-V1-768x1024.jpg" alt="Card image cap">
+				<div id="recipe" class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="recipe_imgs/Sheet-Pan-Pesto-Chicken-Dinner-V1-768x1024.jpg" alt="Sheet Pan Pesto Chicken Dinner">
 				  <div class="card-body">
-					<p class="card-text" style="font-weight: bold;">Sheet Pan Pesto Chicken Dinner</p>
-					<p class="card-text">$11.99</p>
+					<p id="name" value="sheet pan pesto chicken" class="card-text" style="font-weight: bold;">Sheet Pan Pesto Chicken Dinner</p>
+					<p id="price" value="11.99" class="card-text">$11.99</p>
 					<a href="https://www.budgetbytes.com/sheet-pan-pesto-chicken-dinner/" class="card-link" style="font-weight: bold; color: #ffdb58;">Read more</a>
 				  </div>
 				</div>
-				<div class="card" style="width: 18rem;">
-				  <img class="card-img-top" src="recipe_imgs/Thai-Coconut-Curry-Carrot-Soup-V1-768x1024.jpg" alt="Card image cap">
+				<div id="recipe" class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="recipe_imgs/Thai-Coconut-Curry-Carrot-Soup-V1-768x1024.jpg" alt="Thai Coconut Curry Carrot Soup">
 				  <div class="card-body">
-					<p class="card-text" style="font-weight: bold;">Thai Coconut Curry Carrot Soup</p>
-					<p class="card-text">$6.69</p>
+					<p id="name" value="thai coconut curry carrot soup" class="card-text" style="font-weight: bold;">Thai Coconut Curry Carrot Soup</p>
+					<p id="price" value="6.69" class="card-text">$6.69</p>
 					<a href="https://www.budgetbytes.com/thai-coconut-curry-carrot-soup/" class="card-link" style="font-weight: bold; color: #ffdb58;">Read more</a>
 				  </div>
 				</div>
-				<div class="card" style="width: 18rem;">
-				  <img class="card-img-top" src="recipe_imgs/Yellow-Jasmine-Rice-V1-768x1024.jpg" alt="Card image cap">
+				<div id="recipe" class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="recipe_imgs/Yellow-Jasmine-Rice-V1-768x1024.jpg" alt="Yellow Jasmine Rice">
 				  <div class="card-body">
-					<p class="card-text" style="font-weight: bold;">Yellow Jasmine Rice</p>
-					<p class="card-text">$2.01</p>
+					<p id="name" value="yellow jasmine rice" class="card-text" style="font-weight: bold;">Yellow Jasmine Rice</p>
+					<p id="price" value="2.01" class="card-text">$2.01</p>
 					<a href="https://www.budgetbytes.com/yellow-jasmine-rice/" class="card-link" style="font-weight: bold; color: #ffdb58;">Read more</a>
 				  </div>
 				</div>
-				<div class="card" style="width: 18rem;">
-				  <img class="card-img-top" src="recipe_imgs/Pressure-Cooker-Chicken-and-Rice-V2.jpg" alt="Card image cap">
+				<div id="recipe" class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="recipe_imgs/Pressure-Cooker-Chicken-and-Rice-V2.jpg" alt="Pressure Cooker Chicken and Rice">
 				  <div class="card-body">
-					<p class="card-text" style="font-weight: bold;">Pressure Cooker Chicken and Rice</p>
-					<p class="card-text">$12.31</p>
+					<p id="name" value="pressure cooker chicken" class="card-text" style="font-weight: bold;">Pressure Cooker Chicken and Rice</p>
+					<p id="price" value="12.31" class="card-text">$12.31</p>
 					<a href="https://www.budgetbytes.com/pressure-cooker-chicken-rice/" class="card-link" style="font-weight: bold; color: #ffdb58;">Read more</a>
 				  </div>
 				</div>
-				<div class="card" style="width: 18rem;">
-				  <img class="card-img-top" src="recipe_imgs/Cheesy-Cauliflower-and-Potato-Soup-V3-768x1024.jpg" alt="Card image cap">
+				<div id="recipe" class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="recipe_imgs/Cheesy-Cauliflower-and-Potato-Soup-V3-768x1024.jpg" alt="Cheesy Cauliflower and Potato Soup">
 				  <div class="card-body">
-					<p class="card-text" style="font-weight: bold;">Cheesy Cauliflower and Potato Soup</p>
-					<p class="card-text">$6.37</p>
+					<p id="name" value="cheesy cauliflower soup" class="card-text" style="font-weight: bold;">Cheesy Cauliflower and Potato Soup</p>
+					<p id="price" value="6.37" class="card-text">$6.37</p>
 					<a href="https://www.budgetbytes.com/cheesy-cauliflower-and-potato-soup/" class="card-link" style="font-weight: bold; color: #ffdb58;">Read more</a>
 				  </div>
 				</div>
-				<div class="card" style="width: 18rem;">
-				  <img class="card-img-top" src="recipe_imgs/Smoky-Tomato-Soup-bowl-text.jpg" alt="Card image cap">
+				<div id="recipe" class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="recipe_imgs/Smoky-Tomato-Soup-bowl-text.jpg" alt="Smoky Tomato Soup">
 				  <div class="card-body">
-					<p class="card-text" style="font-weight: bold;">Smoky Tomato Soup</p>
-					<p class="card-text">$4.12</p>
+					<p id="name" value="smoky tomato soup" class="card-text" style="font-weight: bold;">Smoky Tomato Soup</p>
+					<p id="price" value="4.12" class="card-text">$4.12</p>
 					<a href="https://www.budgetbytes.com/smoky-tomato-soup/" class="card-link" style="font-weight: bold; color: #ffdb58;">Read more</a>
 				  </div>
 				</div>
-				<div class="card" style="width: 18rem;">
-				  <img class="card-img-top" src="recipe_imgs/Saucy-Southwest-Shredded-Beef-text.jpg" alt="Card image cap">
+				<div id="recipe" class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="recipe_imgs/Saucy-Southwest-Shredded-Beef-text.jpg" alt="Saucy Southwest Shredded Beef">
 				  <div class="card-body">
-					<p class="card-text" style="font-weight: bold;">Saucy Southwest Shredded Beef</p>
-					<p class="card-text">$15.22</p>
+					<p id="name" value="saucy southwest shredded beef" class="card-text" style="font-weight: bold;">Saucy Southwest Shredded Beef</p>
+					<p id="price" value="15.22" class="card-text">$15.22</p>
 					<a href="https://www.budgetbytes.com/saucy-southwest-shredded-beef/" class="card-link" style="font-weight: bold; color: #ffdb58;">Read more</a>
 				  </div>
 				</div>
-				<div class="card" style="width: 18rem;">
-				  <img class="card-img-top" src="recipe_imgs/Garlic-Parmesan-Kale-Pasta-V2-768x1024.jpg" alt="Card image cap">
+				<div id="recipe" class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="recipe_imgs/Garlic-Parmesan-Kale-Pasta-V2-768x1024.jpg" alt="Garlic Parmesan Kale Pasta">
 				  <div class="card-body">
-					<p class="card-text" style="font-weight: bold;">Garlic Parmesan Kale Pasta</p>
-					<p class="card-text">$3.37</p>
+					<p id="name" value="garlic parmesan kale pasta" class="card-text" style="font-weight: bold;">Garlic Parmesan Kale Pasta</p>
+					<p id="price" value="3.37" class="card-text">$3.37</p>
 					<a href="https://www.budgetbytes.com/garlic-parmesan-kale-pasta/" class="card-link" style="font-weight: bold; color: #ffdb58;">Read more</a>
 				  </div>
 				</div>
 			</div>
 		</div>
 	</div>		
-	<div id="productList"></div>
 	<!--SCRIPTS-->
 	<script type="text/javascript" src="productList.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -179,3 +184,4 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>
+
