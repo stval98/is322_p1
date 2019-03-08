@@ -1,29 +1,85 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-<style>
-body {
-  background-color: pink;
-  text-align: center;
-  color: black;
-  font-family: Arial, Goudy, sans-serif;
-}
-</style>
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<!--Made using Bootsrap 4-->
+<!--All recipes and photos come from budgetbytes.com-->
+  <head>
+    <meta charset="utf-8" />
+	<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="theme-color" content="#ffffff">
+	<!--STYLESHEETS-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="productList.css" />
+    <title>Product List</title>
+  </head>
+  <body>
+    <div id="root"></div>
+	<!--NAVIGATION BAR-->
+	<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: black;">
+		<a class="navbar-brand" href="landing.html" style="color:white;">Food!</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	<!--Navbar content -->
+	  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+		  <li class="nav-item">
+			<a class="nav-link" href="landing.html">Home</a>
+		  </li>
+		  <li class="nav-item active">
+			<a class="nav-link" href="productList.html">Recipes <span class="sr-only">(current)</span></a>
+		  </li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+		  <input class="form-control mr-sm-2" type="search" placeholder="Search">
+		  <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" style="border-color: #ffdb58; background-color: #ffdb58;">Search</button>
+		</form>
+	  </div>
+	</nav>
+	<!--FILTER BAR-->
+	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+	<!--Navbar content -->
+	  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+		  <li class="nav-item">
+			<div class="dropdown">
+				<button class="btn-dark btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-color: #ffdb58; background-color: #ffdb58; color: black;">
+					Sort recipes
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#">By name: A-Z</a>
+				<a class="dropdown-item" href="#">By name: Z-A</a>
+				<a class="dropdown-item" href="#">By price: low to high</a>
+				<a class="dropdown-item" href="#">By price: high to low</a>
+			</div>
+</div>
+		  </li>
+		</ul>
+	  </div>
+	</nav>
 
 <h1>Featured Recipe</h1>
 <u>Roasted Eggplant with Goat Cheese, Lentils and Thyme</u>
-<p>This is our most favorable dish! Our food preference is simple yet so delicious, healthy, and unique with a hint of Mediterranean, Italian, and Thai flavors. So it’s no surprise that it is our most favorable dish, which includes, vegetables, great cheeses, and legumes. This Roasted Eggplant with Goat Cheese and Lentils is exactly our type of meal. It’s easy, satisfying, and doesn’t skimp on the flavor. High-quality ingredients are essential and a must! We do not compromise flavor, nutrition, and overall deliciousness.</p>
+<p><img src="eggplant.jpg" alt="eggplant" style="width:250px"></p>
+<p>This is our most favorable dish! Our food preference is simple yet so delicious, healthy, and unique with a hint of Mediterranean, Italian, and Thai flavors. So its no surprise that it is our most favorable dish, which includes, vegetables, great cheeses, and legumes. This Roasted Eggplant with Goat Cheese and Lentils is exactly our type of meal. Its easy, satisfying, and doesnt skimp on the flavor. High-quality ingredients are essential and a must! We do not compromise flavor, nutrition, and overall deliciousness.</p>
 <b>How to roast the eggplant:</b>
-<p>Slice and score the eggplant — First, cut the eggplant in half lengthwise. Then score the eggplants all over in a criss-cross pattern, being careful not to cut through the skin (you should score the eggplants fairly deep, though).</p>
-<p>Drizzle with olive oil — Drizzle the eggplant with olive oil and work some of it into the cuts in the eggplant with your fingers. </p>
-<p>Bake skin side down — Bake the eggplant with the cut flesh facing upwards. You’ll know when the eggplant is ready to come out of the oven when it’s golden brown in color and just beginning to char. </p>
+<p>Slice and score the eggplant. First, cut the eggplant in half lengthwise. Then score the eggplants all over in a criss-cross pattern, being careful not to cut through the skin (you should score the eggplants fairly deep, though).</p>
+<p>Drizzle with olive oil. Drizzle the eggplant with olive oil and work some of it into the cuts in the eggplant with your fingers. </p>
+<p>Bake skin side down. Bake the eggplant with the cut flesh facing upwards. You will know when the eggplant is ready to come out of the oven when its golden brown in color and just beginning to char. </p>
 <b>We have some tips for making this dish!</b>
-<p>Use canned lentils — To cut down on the prep work, use a can of pre-cooked lentils for this roasted eggplant recipe. (But if you have dry lentils on hand that you want to use up, feel free to cook the lentils yourself.)
-<p>Smash the lentils slightly — While you don’t need to puree the lentils, it does help them stick to the top of the roasted eggplant if you mash them up a bit with a fork. You want about half the lentils to be mashed.</p> 
-<p>Use fresh lemon juice — For the best flavor, use freshly squeezed lemon juice and not the bottled kind. This is a hearty dinner recipe, and the fresh lemon juice adds some much needed brightness to the dish. </p>
+<p>Use canned lentils. To cut down on the prep work, use a can of pre-cooked lentils for this roasted eggplant recipe. (But if you have dry lentils on hand that you want to use up, feel free to cook the lentils yourself.)
+<p>Smash the lentils slightly. While you do not need to puree the lentils, it does help them stick to the top of the roasted eggplant if you mash them up a bit with a fork. You want about half the lentils to be mashed.</p>
+<p>Use fresh lemon juice. For the best flavor, use freshly squeezed lemon juice and not the bottled kind. This is a hearty dinner recipe, and the fresh lemon juice adds some much needed brightness to the dish. </p>
 <b> Now let's get to the main part! Ingredients!</b>
 <p>-2 baby eggplants, washed
 <p>-3 tablespoons olive oil
@@ -40,13 +96,12 @@ body {
 <p>-2 tablespoons roasted pine nuts, for garnish (optional)
 <p>-purple micro greens, for garnish (optional)</p>
 <b> Instructions:</b>
-<p> 1. Preheat oven to 375°F. Line a large baking sheet with parchment paper.
+<p> 1. Preheat oven to 375F. Line a large baking sheet with parchment paper.
 <p> 2. Slice eggplants in half lengthwise. Score the eggplant flesh in a criss-cross pattern, being careful not to cut through the skin. Drizzle all over with olive oil, using your fingers to rub it into the flesh of the eggplant.
 <p> 3.Place eggplant halves flesh side up on baking tray. Pick off roughly 2 tablespoons of thyme leaves from the thyme bunch, and sprinkled evenly over the eggplant. Sprinkle with salt.
-<p> 4.Bake eggplants for 40-50 minutes, until golden brown and just beginning to char. Once out of the oven, allow eggplants to cool slightly before topping with remaining ingredients. 
-<p> 5.While eggplants are cooking, assemble the rest of your ingredients. In a medium bowl, mix together lentils, parsley, lemon juice, olive oil, salt, pepper, and red pepper flakes. Use the backside of a fork to  crush the lentils, so that about half are mashed ever so slightly. The goal is to get the lentils to stick to each other so that they don’t fall off of the eggplants later on. Set aside.
+<p> 4.Bake eggplants for 40-50 minutes, until golden brown and just beginning to char. Once out of the oven, allow eggplants to cool slightly before topping with remaining ingredients.
+<p> 5.While eggplants are cooking, assemble the rest of your ingredients. In a medium bowl, mix together lentils, parsley, lemon juice, olive oil, salt, pepper, and red pepper flakes. Use the backside of a fork to  crush the lentils, so that about half are mashed ever so slightly. The goal is to get the lentils to stick to each other so that they do not fall off of the eggplants later on. Set aside.
 <p> 6.Top your warm eggplants with a few spoonfuls of lentils. Crumble the goat cheese over the lentils, then finish with pine nuts and micro greens to garnish!
-<img src="eggplant.jpg" alt="eggplant" style="width:200px">
 
 </body>
 </html>
