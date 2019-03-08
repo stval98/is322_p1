@@ -26,10 +26,11 @@
     <div id="root"></div>
 	<!--NAVIGATION BAR-->
 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: black;">
-		<a class="navbar-brand" href="landing.html" style="color:white;">Recipes 'R' Us</a>
+		<a class="navbar-brand" href="index.html" style="color:white;">Recipes 'R' Us</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	  </button>
+	  
 	<!--Navbar content -->
 	  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -39,36 +40,42 @@
 		  <li class="nav-item active">
 			<a class="nav-link" href="productList.html">Recipes <span class="sr-only">(current)</span></a>
 		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="productPage.html">Featured Recipe</span></a>
+		  </li>
 		</ul>
-		<form class="form-inline my-2 my-lg-0">
-		  <input class="form-control mr-sm-2" type="search" placeholder="Search">
-		  <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" style="border-color: #ffdb58; background-color: #ffdb58;">Search</button>
-		</form>
 	  </div>
 	 </nav>
-	 
-<!--SIDEBAR -->
-<div class="w3-sidebar w3-white w3-bar-block" style="width:10%"; id="sidebar">
-  <h3 class="w3-bar-item" style="padding-left: 25px;">Filter Recipes</h3>
-<!--FILTERS-->
-	  <div class="filter-wrapper" style="padding-left: 25px;">
-				<div class="form-group">
-					<label for="sortMenu">Sort By</label>
-					<select id="sortMenu" name="sortMenu">
-						<option value="name">Name</option>
-						<option value="price">Price</option>
-					</select>
-				</div>
-
-				<div class="form-group">
-					<label for="vegan">Show Non-Vegan Meals?</label>	
-					<select id="vegan" name="vegan">
-						<option value="true">Yes</option>
-						<option value="false">No</option>
-					</select>
-				</div>
-</div>
-</div>
+	 <!--SIDENAV-->
+	 <ul class="filter-wrapper" style="position: sticky; padding-left: 25px; width: 100%;">
+		<div class="form-group">
+			<a class="nav-link">
+				<label for="sortMenu">Sort By</label>
+				<select id="sortMenu" name="sortMenu">
+					<option value="name">Name</option>
+					<option value="price">Price</option>
+				</select>
+			</a>
+		</div>
+		<div class="form-group">
+			<a class="nav-link">
+				<label for="vegan">Show Non-Vegan Meals?</label>	
+				<select id="vegan" name="vegan">
+					<option value="true">Yes</option>
+					<option value="false">No</option>
+				</select>
+			</a>
+		</div>
+		<div class="form-group">	
+			<a class="nav-link">
+				<label for="priceRanges">Show Only Low-Priced Meals?</label>	
+				<select id="priceRanges" name="priceRanges">
+					<option value="low">Yes</option>
+					<option value="high">No</option>
+				</select>
+			</a>
+		</div>
+	</ul>
 	<!--PRODUCTS-->
 	<div class="app-container" style="margin-left:15%">
 		<div class="content-container">

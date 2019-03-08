@@ -13,18 +13,18 @@ var foo = 'foo'; // Variables declared outside of any function are considered gl
 
 	// An array of Objects, similar to database records we will eventually be dealing with.
 	var recipeDatabase = [
-		{ name: 'golden coconut lentil soup', title: 'Golden Coconut Lentil Soup', price: '4.27', img: 'recipe_imgs/Golden-Coconut-and-Lentil-Soup-V.jpg', bburl: 'https://www.budgetbytes.com/golden-coconut-lentil-soup/', vegan: true },
-		{ name: 'roasted cauliflower salad', title: 'Roasted Cauliflower Salad with Lemon Tahini Dressing', price: '6.99', img: 'recipe_imgs/Roasted-Cauliflower-Salad-V2.jpg', bburl: 'https://www.budgetbytes.com/roasted-cauliflower-salad-lemon-tahini-dressing/', vegan: true },
-		{ name: 'tomato herb rice', title: 'Tomato Herb Rice with White Beans and Spinach', price: '5.14', img: 'recipe_imgs/Tomato-Herb-Rice-with-White-Beans-and-Spinach-V-768x1024.jpg', bburl: 'https://www.budgetbytes.com/tomato-herb-rice-with-white-beans-and-spinach/', vegan: true },
-		{ name: 'creamy white bean quesadillas', title: 'Creamy White Bean and Spinach Quesadillas', price: '3.99', img: 'recipe_imgs/Creamy-White-Bean-and-Spinach-Quesadillas-V-768x1024.jpg', bburl: 'https://www.budgetbytes.com/creamy-white-bean-and-spinach-quesadillas/', vegan: false },
-		{ name: 'sheet pan pesto chicken', title: 'Sheet Pan Pesto Chicken Dinner', price: '11.99', img: 'recipe_imgs/Sheet-Pan-Pesto-Chicken-Dinner-V1-768x1024.jpg', bburl: 'https://www.budgetbytes.com/sheet-pan-pesto-chicken-dinner/ ', vegan: false },
-		{ name: 'thai coconut curry carrot soup', title: 'Thai Coconut Curry Carrot Soup', price: '6.69', img: 'recipe_imgs/Thai-Coconut-Curry-Carrot-Soup-V1-768x1024.jpg', bburl: 'https://www.budgetbytes.com/thai-coconut-curry-carrot-soup/ vegan', vegan: true },
-		{ name: 'yellow jasmine rice', title: 'Yellow Jasmine Rice', price: '2.01', img: 'recipe_imgs/Yellow-Jasmine-Rice-V1-768x1024.jpg', bburl: 'https://www.budgetbytes.com/yellow-jasmine-rice/', vegan: false },
-		{ name: 'pressure cooker chicken', title: 'Pressure Cooker Chicken and Rice', price: '12.31', img: 'recipe_imgs/Pressure-Cooker-Chicken-and-Rice-V2.jpg', bburl: 'https://www.budgetbytes.com/pressure-cooker-chicken-rice/', vegan: false },
-		{ name: 'cheesy cauliflower soup', title: 'Cheesy Cauliflower and Potato Soup', price: '6.37', img: 'recipe_imgs/Cheesy-Cauliflower-and-Potato-Soup-V3-768x1024.jpg', bburl: 'https://www.budgetbytes.com/cheesy-cauliflower-and-potato-soup/', vegan: false },
-		{ name: 'smoky tomato soup', title: 'Smoky Tomato Soup', price: '4.12', img: 'recipe_imgs/Smoky-Tomato-Soup-bowl-text.jpg', bburl: 'https://www.budgetbytes.com/smoky-tomato-soup/', vegan: true },
-		{ name: 'saucy southwest shredded beef', title: 'Saucy Southwest Shredded Beef', price: '15.22', img: 'recipe_imgs/Saucy-Southwest-Shredded-Beef-text.jpg', bburl: 'https://www.budgetbytes.com/saucy-southwest-shredded-beef/', vegan: false },
-		{ name: 'garlic parmesan kale pasta', title: 'Garlic Parmesan Kale Pasta', price: '3.37', img: 'recipe_imgs/Garlic-Parmesan-Kale-Pasta-V2-768x1024.jpg', bburl: 'https://www.budgetbytes.com/garlic-parmesan-kale-pasta/', vegan: false },
+		{ name: 'golden coconut lentil soup', title: 'Golden Coconut Lentil Soup', price: '4.27', priceRange: true, img: 'recipe_imgs/Golden-Coconut-and-Lentil-Soup-V.jpg', bburl: 'https://www.budgetbytes.com/golden-coconut-lentil-soup/', vegan: true },
+		{ name: 'roasted cauliflower salad', title: 'Roasted Cauliflower Salad with Lemon Tahini Dressing', price: '6.99', priceRange: false, img: 'recipe_imgs/Roasted-Cauliflower-Salad-V2.jpg', bburl: 'https://www.budgetbytes.com/roasted-cauliflower-salad-lemon-tahini-dressing/', vegan: true },
+		{ name: 'tomato herb rice', title: 'Tomato Herb Rice with White Beans and Spinach', price: '5.14', priceRange: false, img: 'recipe_imgs/Tomato-Herb-Rice-with-White-Beans-and-Spinach-V-768x1024.jpg', bburl: 'https://www.budgetbytes.com/tomato-herb-rice-with-white-beans-and-spinach/', vegan: true },
+		{ name: 'creamy white bean quesadillas', title: 'Creamy White Bean and Spinach Quesadillas', price: '3.99', priceRange: true, img: 'recipe_imgs/Creamy-White-Bean-and-Spinach-Quesadillas-V-768x1024.jpg', bburl: 'https://www.budgetbytes.com/creamy-white-bean-and-spinach-quesadillas/', vegan: false },
+		{ name: 'sheet pan pesto chicken', title: 'Sheet Pan Pesto Chicken Dinner', price: '11.99', priceRange: false, img: 'recipe_imgs/Sheet-Pan-Pesto-Chicken-Dinner-V1-768x1024.jpg', bburl: 'https://www.budgetbytes.com/sheet-pan-pesto-chicken-dinner/ ', vegan: false },
+		{ name: 'thai coconut curry carrot soup', title: 'Thai Coconut Curry Carrot Soup', price: '6.69', priceRange: false, img: 'recipe_imgs/Thai-Coconut-Curry-Carrot-Soup-V1-768x1024.jpg', bburl: 'https://www.budgetbytes.com/thai-coconut-curry-carrot-soup/ vegan', vegan: true },
+		{ name: 'yellow jasmine rice', title: 'Yellow Jasmine Rice', price: '2.01', priceRange: true, img: 'recipe_imgs/Yellow-Jasmine-Rice-V1-768x1024.jpg', bburl: 'https://www.budgetbytes.com/yellow-jasmine-rice/', vegan: false },
+		{ name: 'pressure cooker chicken', title: 'Pressure Cooker Chicken and Rice', price: '12.31', priceRange: false, img: 'recipe_imgs/Pressure-Cooker-Chicken-and-Rice-V2.jpg', bburl: 'https://www.budgetbytes.com/pressure-cooker-chicken-rice/', vegan: false },
+		{ name: 'cheesy cauliflower soup', title: 'Cheesy Cauliflower and Potato Soup', price: '6.37', priceRange: false, img: 'recipe_imgs/Cheesy-Cauliflower-and-Potato-Soup-V3-768x1024.jpg', bburl: 'https://www.budgetbytes.com/cheesy-cauliflower-and-potato-soup/', vegan: false },
+		{ name: 'smoky tomato soup', title: 'Smoky Tomato Soup', price: '4.12', priceRange: true, img: 'recipe_imgs/Smoky-Tomato-Soup-bowl-text.jpg', bburl: 'https://www.budgetbytes.com/smoky-tomato-soup/', vegan: true },
+		{ name: 'saucy southwest shredded beef', title: 'Saucy Southwest Shredded Beef', price: '15.22', priceRange: false, img: 'recipe_imgs/Saucy-Southwest-Shredded-Beef-text.jpg', bburl: 'https://www.budgetbytes.com/saucy-southwest-shredded-beef/', vegan: false },
+		{ name: 'garlic parmesan kale pasta', title: 'Garlic Parmesan Kale Pasta', price: '3.37', priceRange: false, img: 'recipe_imgs/Garlic-Parmesan-Kale-Pasta-V2-768x1024.jpg', bburl: 'https://www.budgetbytes.com/garlic-parmesan-kale-pasta/', vegan: false },
 	];
 
 	function renderRecipes (results) {
@@ -86,25 +86,42 @@ var foo = 'foo'; // Variables declared outside of any function are considered gl
 		orderBy(event.target.value);
 	});
 
-	// Function to filter out unpublished results
+	// Function to filter out non-vegan results
 	function toggleVegan(showVegan) {
-		// If showPublished is TRUE, only display published results
+		// If showVegan is TRUE, only display published results
 		// Filter will only inclue objects that return TRUE from it's query
 		var filteredResults = recipeDatabase.filter(function (result) {
-			// If showPublished is TRUE, always show.
-			// Otherweise only show if published is TRUE
+			// If showVegan is TRUE, always show.
+			// Otherweise only show if vegan is TRUE
 			return showVegan || result.vegan;
 		});
 		renderRecipes(filteredResults);
 	}
+	
 	// Change events trigger after the value of a form input changes
 	document.querySelector('#vegan').addEventListener('change', function(event){
 		// in this case value is a string that we need to convert to a boolean 
 		var value = event.target.value === 'true';
 		toggleVegan(value);
 	});
-
-
-
+	
+	function toggleRanges(showRanges){
+		var filteredResults = recipeDatabase.filter(function (result){
+			return showRanges || result.priceRange;
+		});
+		renderRecipes(filteredResults);
+	}
+	
+	document.querySelector('#priceRanges').addEventListener('change', function(event){
+		// in this case value is a string that we need to convert to a boolean 
+		if (event.target.value === 'true'){
+			var value = event.target.value === 'low';
+			toggleRanges(value);
+		}
+		else{
+			var value = event.target.value === 'high';
+			toggleRanges(value);
+		}
+	});
 })(); // Wrap entire file in self executing function. 
       // Keeping all variables declared in this file inside a local scope.
